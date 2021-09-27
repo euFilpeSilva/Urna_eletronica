@@ -111,6 +111,22 @@ line-height: 30px;
 
 .divisao-1-right{
 width: 90px;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+}
+.divisao-1-image{
+  border: 1px solid #000;
+  background: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+.divisao-1-image img{
+width: 100%;
+}
+.divisao-1-image.small{
+width: 80%;
+font-size:12px ;
 }
 
 .divisao-2{
