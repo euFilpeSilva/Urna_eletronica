@@ -10,12 +10,16 @@ let numeros = document.querySelector('.divisao-1-3');
 /*VARIAVEIS DE CONTROLE DE AMBIENTE */
 let etapaAtual = 0;
 let numero = '';
+let votoBranco = false;
+let votos = [];
 
 function comecarEtapa(){
   let etapa = etapas[etapaAtual];
 
   let numeroHtml = '';
- 
+  numero = '';
+  votoBranco = false;
+
   for(let i =0;i < etapa.numeros;i++){
     if(i === 0){
       numeroHtml += '<div class="numero pisca"></div>';
@@ -66,7 +70,7 @@ function clicou(n){
  let elNumero= document.querySelector('.numero.pisca');
  if(elNumero !== null){
    elNumero.innerHTML = n;
-    numero = `${numero}${n}`;
+   numero = `${numero}${n}`;
 
    elNumero.classList.remove('pisca');
    if(elNumero.nextElementSibling !== null){
@@ -78,13 +82,47 @@ function clicou(n){
 }
 
 function branco(){
-  alert("clicou BRANCO")
+  if(numero === ''){
+    votoBranco= true;
+    seuVotoPara.style.display = 'block';
+    aviso.style.display = 'block';
+    numeros.innerHTML = '';
+    descricao.innerHTML = '<div class= "aviso--grande pisca">VOTO EM BRANCO</div>';
+    lateral.innerHTML = '';
+  }else{
+    alert('Para votar em branco é preciso corrigir/zerar a interface!')
+  }
 }
 function corrige(){
-  alert("clicou CORRIGE")
+  comecarEtapa();
 }
 function confirma(){
-  alert("clicou CONFIRMA")
+  let etapa = etapas[etapaAtual];
+
+  let votoConfirmado = false;
+
+  if(votoBranco === true){
+    votoConfirmado = true;
+    votos.push({
+      etapa: etapas[etapaAtual].titulo,
+      voto: 'branco'
+    });
+  }else if(numero.length === etapa.numeros){
+    votos.push({
+      etapa: etapas[etapaAtual].titulo,
+      voto: numero
+    });
+  }
+  if(votoConfirmado){
+    etapaAtual++;
+    if(etapas[etapaAtual] !== undefined){
+      comecarEtapa();
+    }else{
+      document.querySelector('.tela').innerHTML = '<div class= "aviso--gigante pisca">FIM</div>';
+      console.log(votos);
+    }
+   
+  }
 }
 // esta execução de função serve
 // pra limpar as informações da tela.
