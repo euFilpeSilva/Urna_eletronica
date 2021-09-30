@@ -126,9 +126,8 @@ align-items: flex-end;
 width: 100%;
 }
 .divisao-1-image.small{
-width: 70%;
-font-size:12px ;
-}
+  width: 70%;
+  }
 
 .divisao-2{
 height: 50px;
