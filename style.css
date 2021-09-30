@@ -10,6 +10,7 @@ body{
   justify-content: center;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
+  margin-top: 300px;
 }
 
 .urna{
@@ -125,7 +126,7 @@ align-items: flex-end;
 width: 100%;
 }
 .divisao-1-image.small{
-width: 80%;
+width: 70%;
 font-size:12px ;
 }
 
