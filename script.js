@@ -108,14 +108,13 @@ function confirma(){
       voto: 'branco'
     });
   }else if(numero.length === etapa.numeros){
-    votos.push({
-      etapa: etapas[etapaAtual].titulo,
-      voto: numero
-    });
-  }
+    votoConfirmado = true;
+     console.log('confirmado como'+numero);
+    }
+  
   if(votoConfirmado){
     etapaAtual++;
-    if(etapas[etapaAtual] !== undefined){
+    if(etapas[etapaAtual] !== undefined){ 
       comecarEtapa();
     }else{
       document.querySelector('.tela').innerHTML = '<div class= "aviso--gigante pisca">FIM</div>';
