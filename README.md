@@ -7,8 +7,8 @@ Projeto para fins didaticos, elaborado com acompanhamento do professor Bonieky L
 * Numero: 38111
 * Numero: 77222
 
-*prefeito: 99
-*vice-Prefeito: 84
+* prefeito: 99
+* vice-Prefeito: 84
 
 ## Demonstração de voto:
 
