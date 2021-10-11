@@ -3,11 +3,12 @@
 Projeto para fins didaticos, elaborado com acompanhamento do professor Bonieky Lacerda, onde exercitei habilidades como, manipulação por seletor, Flexbox, efeitos de transição construidos com o opacity e @Keyframes.
 # 
 ### vereadores cadastrados:
-Numero: 38111
-Numero: 77222
 
-prefeito: 99
-vice-Prefeito: 84
+* Numero: 38111
+* Numero: 77222
+
+*prefeito: 99
+*vice-Prefeito: 84
 
 ## Demonstração de voto:
 
